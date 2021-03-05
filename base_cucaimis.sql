@@ -81,10 +81,13 @@ CREATE TABLE `donacion_1` (
   `coordinacion` tinyint(4) DEFAULT NULL,
   `deteccion` tinyint(4) DEFAULT NULL,
   `ev_hc_globo` tinyint(4) DEFAULT NULL,
+  `id_inst_donante` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_proceso`),
   KEY `fk_donacion_1_usuarios1_idx` (`cuil_ablacionista`),
   KEY `fk_donacion_1_contraindicaciones1_idx` (`contraindicaciones`),
+  KEY `fk_donacion_1_institucion_donante1_idx` (`id_inst_donante`),
   CONSTRAINT `fk_donacion_1_contraindicaciones1` FOREIGN KEY (`contraindicaciones`) REFERENCES `contraindicaciones` (`id_contraindicacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_donacion_1_institucion_donante1` FOREIGN KEY (`id_inst_donante`) REFERENCES `institucion_donante` (`id_institucion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_donacion_1_usuarios1` FOREIGN KEY (`cuil_ablacionista`) REFERENCES `usuarios` (`cuil`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -242,4 +245,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-04 19:29:41
+-- Dump completed on 2021-03-04 21:24:09
