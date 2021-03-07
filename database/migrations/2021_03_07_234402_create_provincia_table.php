@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBancoTejidoTable extends Migration
+class CreateProvinciaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateBancoTejidoTable extends Migration
      */
     public function up()
     {
-        Schema::create('banco_tejido', function (Blueprint $table) {
-            $table->integer('id_banco')->unsigned()->primary();
+        Schema::create('provincias', function (Blueprint $table) {
+            $table->integer('id_prov')->unsigned()->primary();
             $table->string('nombre');
-            $table->integer('id_provincia')->unsigned();
-            $table->foreign('id_provincia')->references('id_prov')->on('provincias');
         });
     }
 
@@ -28,6 +26,6 @@ class CreateBancoTejidoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banco_tejido');
+        Schema::dropIfExists('provincias');
     }
 }

@@ -13,7 +13,10 @@ class CreateContraindicacionesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('contraindicaciones', function (Blueprint $table) {
+            $table->integer('id_contraindicacion')->unsigned()->primary();
+            $table->string('detalle');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class CreateContraindicacionesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('contraindicaciones');
     }
 }
