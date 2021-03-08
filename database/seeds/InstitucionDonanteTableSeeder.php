@@ -11,6 +11,18 @@ class InstitucionDonanteTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('institucion_donate')->delete();
+        $json = File::get(__DIR__ . '/json/cucaimis.json');
+        $data = json_decode($json);
+          
+        foreach ($data as $item){
+            InstitucionDonante::create(array(
+                'id_institucion'=> $item ->idInstitucion,
+                'id_provincia'=> $item ->idProvincia,
+                'nombre'=> $item -> nombreInstitucion,
+    
+                  
+          ));
+        }
     }
 }

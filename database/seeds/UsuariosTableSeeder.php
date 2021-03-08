@@ -11,6 +11,22 @@ class UsuariosTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-    }
-}
+        DB::table('usuarios')->delete();
+        $json = File::get(__DIR__ . '/json/cucaimis.json');
+        $data = json_decode($json);
+          
+        foreach ($data as $item){
+              Usuarios::create(array(
+                  'cuil' => $item->cuilUsuario,
+                  'nombre' => $item->nombreUsuario,
+                  'apellido' => $item->apellidoUsuario,
+                  'titulo' => $item->tituloUsuario,
+                  'cargo' => $item->cargoUsuario,
+                  
+          ));
+        
+         }
+      }
+      
+      
+      }
