@@ -28,7 +28,7 @@ class CreateDonacion1Table extends Migration
             $table->boolean('deteccion')->nullable();
             $table->boolean('ev_hc_globo')->nullable();
             $table->integer('id_inst_donante')->unsigned();
-            $table->foreing('id_inst_donate')->references('id_institucion')->on('institucion_donante');
+            $table->foreign('id_inst_donante')->references('id_institucion')->on('institucion_donante');
 
         });
     }

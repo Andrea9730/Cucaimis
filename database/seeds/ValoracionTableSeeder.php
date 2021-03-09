@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ValoracionTableSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class ValoracionTableSeeder extends Seeder
                 'id_proceso'=> $item ->idProceso,
                 'id_banco' => $item ->idBnaco,
                 'estado' => $item -> estado,
-                'asigancion' => $item ->asigancion,
+                'asignacion' => $item ->asigancion,
                 'fecha_implante' => $item ->fechaImplante,
                   
           ));

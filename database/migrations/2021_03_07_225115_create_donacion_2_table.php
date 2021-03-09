@@ -15,7 +15,7 @@ class CreateDonacion2Table extends Migration
     {
         Schema::create('donacion_2', function (Blueprint $table) {
             $table->integer('id_proceso')->unsigned();
-            $table->foreing('id_proceso')->references('id_proceso')->on('donacion_1');
+            $table->foreign('id_proceso')->references('id_proceso')->on('donacion_1');
             $table->boolean('entrevista_fam')->nullable();
             $table->boolean('orden_judicial')->nullable();
             $table->boolean('disp_ablacionista')->nullable();
