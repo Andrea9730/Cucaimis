@@ -18,6 +18,7 @@ class CreateBancoTejidoTable extends Migration
             $table->string('nombre');
             $table->integer('id_provincia')->unsigned();
             $table->foreign('id_provincia')->references('id_prov')->on('provincias');
+            
         });
     }
 
