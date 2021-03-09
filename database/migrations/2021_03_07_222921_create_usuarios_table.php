@@ -17,6 +17,7 @@ class CreateUsuariosTable extends Migration
             $table->integer('cuil')->unsigned()->primary();
             $table->string('nombre');
             $table->string('apellido');
+            $table->string('direccion');
             $table->string('titulo');
             $table->string('cargo');
             $table->rememberToken();
