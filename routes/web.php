@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/donacion', function () {
+    return view('Donacion_1.index');
+});
+Route::get('/donacion/nuevo_proceso', function () {
+    return view('Donacion_1.create');
+});
+Route::get('/donacion/editar', function () {
+    return view('Donacion_1.edit');
+});
+Route::get('/valoracion/nueva_val', function () {
+    return view('Valoracion.create');
+});
