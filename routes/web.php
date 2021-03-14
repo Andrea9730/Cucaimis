@@ -24,18 +24,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('lista_ablacionista',[Donacion1Controller::class, 'mostrar']);
 
-//Route::get('/donacion', 'Donacion1Controller@index');
+Route::get('/donacion', 'Donacion1Controller@index');
 
-//Route::get('/donacion/nuevo_proceso', 'Donacion1Controller@create');
+Route::get('/donacion/nuevo_proceso', 'Donacion1Controller@create', 'Donacion1Controller@listaAb');
 
 
-Route::resource('donacion1', 'donacion1Controller');
 
 Route::get('/donacion/editar', function () {
     return view('Donacion_1.edit');
 });
+
 Route::get('/valoracion/nueva_val', function () {
     return view('Valoracion.create');
 });
