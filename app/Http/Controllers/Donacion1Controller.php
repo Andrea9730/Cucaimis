@@ -22,11 +22,11 @@ class Donacion1Controller extends Controller
     {
         return view('Donacion_1.create');
     }
-    
-    public function listaAb ()
+
+    public function listaAb()
     {
-        $ablaconista = \DB::table('usuarios')->select('cuil', 'nombre', 'apellido')-> get();
-        return $ablaconista;
+        $usuario = \DB::table('usuarios')-> select('cuil', 'nombre', 'apellido')-> get();
+        return view ('Donacion_1.create',['usuario'=> $usuario]);
     }
 
 }

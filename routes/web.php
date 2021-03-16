@@ -27,7 +27,10 @@ Route::get('/', function () {
 
 Route::get('/donacion', 'Donacion1Controller@index');
 
-Route::get('/donacion/nuevo_proceso', 'Donacion1Controller@create', 'Donacion1Controller@listaAb');
+Route::get('/donacion/nuevo_proceso', 'Donacion1Controller@create', 'Donacion1Controller@listaAb', function()
+{
+    return view ('Donacion_1.create');
+});
 
 
 

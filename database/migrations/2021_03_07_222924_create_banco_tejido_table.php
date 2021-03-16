@@ -14,9 +14,9 @@ class CreateBancoTejidoTable extends Migration
     public function up()
     {
         Schema::create('banco_tejido', function (Blueprint $table) {
-            $table->integer('id_banco')->unsigned()->primary();
+            $table->bigIncrements('id_banco')->unsigned();
             $table->string('nombre');
-            $table->integer('id_provincia')->unsigned();
+            $table->bigInteger('id_provincia')->unsigned();
             $table->foreign('id_provincia')->references('id_prov')->on('provincias');
             
         });

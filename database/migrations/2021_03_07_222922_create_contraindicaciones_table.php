@@ -14,7 +14,7 @@ class CreateContraindicacionesTable extends Migration
     public function up()
     {
         Schema::create('contraindicaciones', function (Blueprint $table) {
-            $table->increments('id_contraindicacion')->unsigned()->primary();
+            $table->bigIncrements('id_contraindicacion')->unsigned();
             $table->string('detalle');
         });
     }

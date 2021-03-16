@@ -14,8 +14,8 @@ class CreateInstitucionDonanteTable extends Migration
     public function up()
     {
         Schema::create('institucion_donante', function (Blueprint $table) {
-            $table->integer('id_institucion')->unsigned()->primary();
-            $table->integer('id_provincia')->unsigned();
+            $table->bigIncrements('id_institucion')->unsigned();
+            $table->bigInteger('id_provincia')->unsigned();
             $table->foreign('id_provincia')->references('id_prov')->on('provincias');
             $table->string('nombre');
         });

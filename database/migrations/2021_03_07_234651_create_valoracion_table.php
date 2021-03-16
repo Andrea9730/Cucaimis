@@ -16,7 +16,7 @@ class CreateValoracionTable extends Migration
     Schema::create('valoracion', function (Blueprint $table) {
         $table->integer('id_proceso')->unsigned();
         $table->foreign('id_proceso')->references('id_proceso')->on('donacion_1');
-        $table->integer('id_banco')->unsigned();
+        $table->bigInteger('id_banco')->unsigned();
         $table->foreign('id_banco')->references('id_banco')->on('banco_tejido');
         $table->integer('estado')->unsigned();
         $table->boolean('asigancion')->nullable();
