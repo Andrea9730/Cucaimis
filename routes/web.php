@@ -24,20 +24,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/donacion1', function () {
+    return view('donacion_1.index');
+});
 
-Route::get('/donacion', 'Donacion1Controller@index');
-
-Route::get('/donacion/nuevo_proceso', 'Donacion1Controller@create', 'Donacion1Controller@listaAb', function()
-{
-    return view ('Donacion_1.create');
+Route::get('/donacion1/create', function () {
+    return view('donacion_1.create');
 });
 
 
-
-Route::get('/donacion/editar', function () {
-    return view('Donacion_1.edit');
-});
-
-Route::get('/valoracion/nueva_val', function () {
-    return view('Valoracion.create');
-});
