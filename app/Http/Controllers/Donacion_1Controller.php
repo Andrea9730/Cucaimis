@@ -35,9 +35,16 @@ class Donacion_1Controller extends Controller
      */
     public function store(Request $request)
     {
-        $datosDonacion_1= request()->all();
+        //$datosDonacion_1= request()->all();
+
+        $datosDonacion_1= request()->except('_token');
+
+        Donacion_1::insert($datosDonacion_1);
+        
+
         return response()->json($datosDonacion_1);
-    }
+    } 
+    
 
     /**
      * Display the specified resource.

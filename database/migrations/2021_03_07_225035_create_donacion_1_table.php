@@ -18,6 +18,7 @@ class CreateDonacion1Table extends Migration
             $table->bigInteger('cuil_ablacionista')->unsigned();
             $table->foreign('cuil_ablacionista')->references('cuil')->on('usuarios');
             $table->boolean('cert_defuncion')->nullable();
+            $table->dateTimeTz('fecha_defuncion', $precision = 0);
             $table->bigInteger('id_provincia')->unsigned();
             $table->foreign('id_provincia')->references('id_prov')->on('provincias');
             $table->bigInteger('contraindicaciones')->unsigned();
