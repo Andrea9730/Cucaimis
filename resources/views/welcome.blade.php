@@ -1,94 +1,97 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <title>Chequeo operativo de Córneas</title>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <link rel="stylesheet" href="fonts/icomoon/styleLan.css">
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/styleLan.css">
+    <link rel="shortcut icon" href="{{url('\index_login\iconos\eye-fill.svg')}}" />
+    <title>Equipo Ojitos</title>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+</head>
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Chequeo Operativo de Córneas
-                </div>
-
-                <div class="links">
-                    <a href= "donacion">Ver Donaciones</a>
-                    <a href= "donacion/nuevo_proceso">Nuevo Proceso</a>
-                    <a href= "donacion/editar">Editar Proceso</a>
-                    <a href= "valoracion/nueva_val">Nueva Valoracion</a>
+<body>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card p-4 mt-3">
+                                        <div class="first">
+                                            <h6 class="heading">Dario Klikaylo</h6>
+                                            <div class="time d-flex flex-row align-items-center justify-content-between mt-3">
+                                                <div class="d-flex align-items-center"> <i class="fa fa-clock-o clock"></i> <span class="hour ml-1">500 hs Probando Laravel </span> </div>
+                                                <div> <span class="font-weight-bold">Skills +10 </span> </div>
+                                            </div>
+                                        </div>
+                                        <div class="second d-flex flex-row mt-2">
+                                            <div class="image mr-3"> <img src="{{url('\css\imageLan\dario.jpeg')}}" class="rounded-circle" width="60" /> </div>
+                                            <div class="">
+                                                <div class="d-flex flex-row mb-1"> <span>@darioklikaylolinkedin</span>
+                                                    <div class="ratings ml-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                                </div>
+                                                <div> <button class="btn btn-outline-dark btn-sm px-2">BackEnd</button> <button class="btn btn-outline-dark btn-sm">Innovador</button> <button class="btn btn-outline-dark btn-sm"><i class="fa fa-comment-o"></i></button>                                                    </div>
+                                            </div>
+                                        </div>
+                                        <hr class="line-color">
+                                        <h6>Devoto a San Laravel</h6>
+                                        <div class="third mt-4"> <button class="btn btn-success btn-block"><i class="fa fa-clock-o"></i> ¿Aprobado?</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4 mt-3">
+                            <div class="first">
+                                <h6 class="heading">Andrea Aguiar</h6>
+                                <div class="time d-flex flex-row align-items-center justify-content-between mt-3">
+                                    <div class="d-flex align-items-center"> <i class="fa fa-clock-o clock"></i> <span class="hour ml-1">1000 hs con Data</span> </div>
+                                    <div> <span class="font-weight-bold">Skills +10 </span> </div>
+                                </div>
+                            </div>
+                            <div class="second d-flex flex-row mt-2">
+                                <div class="image mr-3"> <img src="C:\xampp\htdocs\cucaimis\css\imageLan\andrea.jpeg" class="rounded-circle" width="60" /> </div>
+                                <div class="">
+                                    <div class="d-flex flex-row mb-1"> <span>@andrealinkedin</span>
+                                        <div class="ratings ml-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                    </div>
+                                    <div> <button class="btn btn-outline-dark btn-sm px-2">BackEnd y BD</button> <button class="btn btn-outline-dark btn-sm">Genia</button> <button class="btn btn-outline-dark btn-sm"><i class="fa fa-comment-o"></i></button>                                        </div>
+                                </div>
+                            </div>
+                            <hr class="line-color">
+                            <h6>Devoto a San Laravel</h6>
+                            <div class="third mt-4"> <button class="btn btn-success btn-block"><i class="fa fa-clock-o"></i> ¿Aprobado?</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+    </div>
+
+</body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="text">¡Gracias por Todo!</span>
+            </div>
+
         </div>
-    </body>
+    </div>
+    <footer>
+
 </html>

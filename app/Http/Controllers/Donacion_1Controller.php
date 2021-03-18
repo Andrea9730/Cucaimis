@@ -14,7 +14,7 @@ class Donacion_1Controller extends Controller
      */
     public function index()
     {
-        //
+        return view('donacion_1.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class Donacion_1Controller extends Controller
      */
     public function create()
     {
-        //
+        return view('donacion_1.create');
     }
 
     /**
@@ -35,7 +35,8 @@ class Donacion_1Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosDonacion_1= request()->all();
+        return response()->json($datosDonacion_1);
     }
 
     /**

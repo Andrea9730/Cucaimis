@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="C:\xampp\htdocs\practicas\index_login\iconos\eye-fill.svg">
+    <title>Datos</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"> <a href="" class="boton_1">¿Quienes Somos?</a></div>
+                <div class="col-md-3"> <a href="" class="boton_1">Pasos del Proceso</a> </div>
+                <div class="col-md-3"> <a href="" class="boton_1">Contacto</a> </div>
+                <div class="col-md-3"> <a href="" class="boton_1">Testimonios</a> </div>
+            </div>
+        </div>
+    </header>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="C:\xampp\htdocs\practicas\index_datos\images\perfil.jpg" alt="" />
+                        <div class="file btn btn-lg btn-primary">
+                            Editar Foto
+                            <input type="file" name="file" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            <b> Nuevo Chequeo </b>
+                        </h5>
+                        <h6>
+                            Ingrese Por favor los datos solicitados:
+                        </h6>
+                        <p class="proile-rating">Numero de Proceso : <span>Nº 1234557</span></p>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <input type="npd" id="inputNPD" class="form-control" placeholder="NPD" required autofocus>
+                                <label for="inputNPD">Ingrese el Nº de NPD</label>
+                            </li>
+                            <br>
+                            <li class="nav-item">
+                                <input type="ablacionista" id="ablacionista" class="form-control" placeholder="Ablacionista" required autofocus>
+                                <label for="inputAblacionista">Seleccione Ablacionista</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Editar Perfil" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <p>Datos Relevantes</p>
+                        <a href="">Nombre y Apellido: Roberto Perez</a><br/>
+                        <a href="">Direccion: Roque Perez Nº124</a><br/>
+                        <a href="">Fecha de Nacimiento: 24/11/1990</a>
+                        <p>Datos Complementarios</p>
+                        <a href="">Telefono de un Familiar: 3764758778</a><br/>
+                        <a href="">Mail de un Familiar: no tiene</a><br/>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="date" id="inputfechaDefuncion" class="form-control" placeholder="Fecha" required autofocus>
+                                    <label for="inputfechaDefuncion">Ingrese la Fecha de Defunsion</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="provincia" id="inputprovincia" class="form-control" placeholder="Provincia" required autofocus>
+                                    <label for="inputprovincia">Ingrese la Provincia/label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="institucionDonante" id="inputinstitucionDonante" class="form-control" placeholder="Institucion Donante" required autofocus>
+                                    <label for="inputinstitucionDonante">Ingrese la Institucion Donante</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="voluntad" id="inputvoluntad" class="form-control" placeholder="Si/No" required autofocus>
+                                    <label for="inputvoluntad">Ingrese la Voluntad del Donante</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="viable" id="inputviable" class="form-control" placeholder="Si/No" required autofocus>
+                                    <label for="inputviable">¿Son Viables?</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="motivo" id="inputmotivo" class="form-control" placeholder="Indique el motivo de la Viabilidad o no" required autofocus>
+                                    <label for="inputviable">Motivo</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <b><label> TAREAS REALIZADAS</label> </b>
+                                </div>
+                                <div class="col-md-6">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Coordinacion
+                                        <input list="coordinacion" name="coordinacion" /></label>
+                                    <datalist id="coordinacion">
+                                          <option value="Si">
+                                          <option value="No">
+                                    </datalist>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Deteccion
+                                        <input list="deteccion" name="deteccion" /></label>
+                                    <datalist id="deteccion">
+                                          <option value="Si">
+                                          <option value="No">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Evaluacion de HC
+                                        <input list="evaluacion" name="evaluacion" /></label>
+                                    <datalist id="evaluacion">
+                                          <option value="Si">
+                                          <option value="No">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Cancelar</button>
+                                </div> 
+                                <div class="col-md-6">
+                                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Enviar</button>
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-
+		DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+</script>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="text">#DONACORNEAS</span>
+            </div>
+            <div class="col-md-6">
+                <a href=“https://argentina.gob.ar/salud/incucai/” class=“milink” target=“_blank”>INCUCAI</a>
+            </div>
+        </div>
+    </div>
+<footer>
+
+</html>

@@ -24,12 +24,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/donacion1', function () {
-    return view('donacion_1.index');
-});
+//Route::get('/donacion_1', 'Donacion_1Controller@index');
 
-Route::get('/donacion1/create', function () {
-    return view('donacion_1.create');
-});
+//Route::get('/donacion_1/create', 'Donacion_1Controller@create');
+
+
+Route::resource('donacion_1', 'Donacion_1Controller');
 
 

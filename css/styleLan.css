@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background-color: #CAF0F8;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    background-color: #00B4D8;
+    width: 400px;
+    border-radius: 20px
+}
+
+.heading {
+    font-weight: 700
+}
+
+.hour {
+    margin-top: 1px;
+    color: #000000;
+    font-size: 12px
+}
+
+.ratings i {
+    color: #000000
+}
+
+.btn {
+    border-radius: 15px !important;
+    background-color: #03045E;
+    color: #FFFFFF;
+}
+
+.line-color {
+    color: #03045E;
+    height: 3px
+}
+
+.emp-profile {
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+footer {
+    color: #00B4D8;
+    font-family: mistral;
+    font-size: 36px;
+    letter-spacing: 5px;
+    background-color: #03045E;
+    text-align: center;
+}
